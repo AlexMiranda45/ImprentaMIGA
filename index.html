@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IMPRENTA MIGA</title>
-    <link rel="icon" href="lmiga.png">
+    <link rel="icon" href="m.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
@@ -14,23 +14,35 @@
     <header class="header">
 
         <div class="menu container">
-            <a href="#" class="logo">IMPRENTA MIGA</a>
+            <a class="logo">IMPRENTA MIGA</a>
             <input type="checkbox" id="menu" />
             <label for="menu">
-                <img src="images/menu.png" class="menu-icono" alt="menu">
+                <img src="ima/menu.png" class="menu-icono" alt="menu">
             </label>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="#LE">OFRECEMOS</a></li>
-                    <li><a href="#pro">PRODUCTOS</a></li>
-                    <li><a href="#con">CONTACTOS</a></li>
-                </ul>
+           <style>
+  .navbar ul li a {
+    color: black; /* color inicial */
+    text-decoration: none;
+    transition: color 0.3s ease;
 
-            </nav>
+  }
+
+  .navbar ul li a:hover {
+    color: #ffe933; /* color al pasar el mouse, puedes cambiarlo */
+  }
+</style>
+
+<nav class="navbar">
+  <ul>
+    <li><a href="#pro">PRODUCTOS</a></li>
+    <li><a href="#con">CONTACTOS</a></li>
+  </ul>
+</nav>
+
             <div>
                 <ul>
                     <li class="submenu">
-                        <img src="images/car.svg" id="img-carrito" alt="carrito">
+                        <img src="ima/car.svg" id="img-carrito" alt="carrito">
                       
 
                     </li>
@@ -41,9 +53,49 @@
         </div>
 
         <div class="header-content container">
-            <div class="header-img">
-                <img src="images/lmiga.png" alt="">
-            </div>
+            <style>
+  .carousel {
+    position: relative;
+    width: 100%;
+    max-width: 400px; /* puedes ajustar el ancho */
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .carousel-images {
+    display: flex;
+    width: 100%;
+    transition: transform 1s ease;
+  }
+
+  .carousel-images img {
+    width: 100%;
+    flex-shrink: 0;
+  }
+</style>
+
+<div class="carousel">
+  <div class="carousel-images" id="carouselImages">
+    <img src="ima/m.png" alt="Imagen 1">
+    <img src="ima/imprenta.png" alt="Imagen 2">
+    <img src="ima/car3.png" alt="Imagen 3">
+    <img src="ima/car4.png" alt="Imagen 4">
+    <img src="ima/car5.png" alt="Imagen 4">
+  </div>
+</div>
+
+<script>
+  const carousel = document.getElementById('carouselImages');
+  const totalImages = carousel.children.length;
+  let index = 0;
+
+  setInterval(() => {
+    index = (index + 1) % totalImages;
+    carousel.style.transform = `translateX(-${index * 100}%)`;
+  }, 3000); // Cambia de imagen cada 3 segundos
+</script>
+
             <div class="header-txt">
                 
                 <br><p>DISEÑANDO SUEÑOS</p>
@@ -86,342 +138,124 @@
         }
     </style>
 
-    <center>
-                  <br><br><h1 class="heading-1" id="LE">IMPRENTA MIGA LE OFRECE</h1>
-            </center>
-
-    <section class="ofert container">
-       <!-- /* producto 1 */ --> 
-        <div class="ofert-1">
-            <div class="ofert-img">
-                <img src="images/T.png" alt="">
-            </div>
-            <div class="ofert-txt">
-                <h3>TAZAS PERSONALIZADAS</h3>
-                <p>Con el diseño que usted deseé.</p>
-                <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre las tazas perzonalizadas." target="_blank" class="btn-2">Informacion</a>
-            </div>
-        </div>
-        <!-- /* producto 2 */ --> 
-        <div class="ofert-1">
-            <div class="ofert-img">
-                <img src="images/s.png" alt="">
-            </div>
-            <div class="ofert-txt">
-                <h3>SUDADERAS PERSONALIZADAS</h3>
-                <p>Con el diseño que usted elija.</p>
-                <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre las sudaderas perzonalizadas." target="_blank" class="btn-2">Informacion</a>
-            </div>
-        </div>
-        <!-- /* producto 3 */ --> 
-        <div class="ofert-1">
-            <div class="ofert-img">
-                <img src="images/p.png" alt="">
-            </div>
-            <div class="ofert-txt">
-                <h3>PLAYERAS PERSONALIZADAS</h3>
-                <p>Ofrece variedad de diseños y prendas.</p>
-                 <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre las playeras perzonalizadas." target="_blank" class="btn-2">Informacion</a>
-            </div>
-        </div>
-    </section>
-     <section class="ofert container">
-       <!-- /* producto 1 */ --> 
-        <div class="ofert-1">
-            <div class="ofert-img">
-                <img src="images/l.png" alt="">
-            </div>
-            <div class="ofert-txt">
-                <h3>LIBROS PARA COLOREAR</h3>
-                <p>Variedad de libros personalizados.</p>
-               <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre los libros para colorear perzonalizados." target="_blank" class="btn-2">Informacion</a>
-            </div>
-        </div>
-        <!-- /* producto 2 */ --> 
-        <div class="ofert-1">
-            <div class="ofert-img">
-                <img src="images/v.png" alt="">
-            </div>
-            <div class="ofert-txt">
-                <h3>VASOS PERSONALIZADOS</h3>
-                <p>Diseña tus vasos para cualquier evento.</p>
-                <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre los vasos de vidrio perzonalizados." target="_blank" class="btn-2">Informacion</a>
-            </div>
-            </div>
-        </div>
-        <!-- /* producto 3 */ --> 
-        <div class="ofert-1">
-            <div class="ofert-img">
-                <img src="images/ima.png" alt="">
-            </div>
-            <div class="ofert-txt">
-                <h3>IMANES PUBLICITARIOS</h3>
-                <p>Diseña tus imanes publicitarios para tu negocio.</p>
-                <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre imanes perzonalizados." target="_blank" class="btn-2">Informacion</a>
-            </div>
-        </div>
-    </section>
-     <section class="ofert container">
-       <!-- /* producto 1 */ --> 
-        <div class="ofert-1">
-            <div class="ofert-img">
-                <img src="images/st.png" alt="">
-            </div>
-            <div class="ofert-txt">
-                <h3>STICKERS PERSONALIZADOS</h3>
-                <p>Variedad de Stickers.</p>
-                 <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre los stickers perzonalizados." target="_blank" class="btn-2">Informacion</a>
-            </div>
-        </div>
-        <!-- /* producto 2 */ --> 
-        <div class="ofert-1">
-            <div class="ofert-img">
-                <img src="images/enm.png" alt="">
-            </div>
-            <div class="ofert-txt">
-                <h3>ENMICADOS</h3>
-                <p>Enmica tus diseños.</p>
-                  <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre los enmicados perzonalizados." target="_blank" class="btn-2">Informacion</a>
-            </div>
-        </div>
-        <!-- /* producto 3 */ --> 
-        <div class="ofert-1">
-            <div class="ofert-img">
-                <img src="images/eng.png" alt="">
-            </div>
-            <div class="ofert-txt">
-                <h3>ENGARGOLADOS</h3>
-                <p>Engargola tus archivos.</p>
-                <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre los engargolados." target="_blank" class="btn-2">Informacion</a>
-            </div>
-        </div>
-    </section>
-     <section class="ofert container">
-       <!-- /* producto 1 */ --> 
-        <div class="ofert-1">
-            <div class="ofert-img">
-                <img src="images/fo.png" alt="">
-            </div>
-            <div class="ofert-txt">
-                <h3>FOLLETOS</h3>
-                <p>Diseña tus folletos con nosotros.</p>
-                <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre los folletos perzonalizados." target="_blank" class="btn-2">Informacion</a>
-            </div>
-        </div>
-        <!-- /* producto 2 */ --> 
-        <div class="ofert-1">
-            <div class="ofert-img">
-                <img src="images/tar.png" alt="">
-            </div>
-            <div class="ofert-txt">
-                <h3>TARJETAS DE PRESENTACION</h3>
-                <p>Crea tu tarjeta de presentación con nosotros.</p>
-                 <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre las tarjeta de presentación perzonalizadas." target="_blank" class="btn-2">Informacion</a>
-            </div>
-        </div>
-        <!-- /* producto 3 */ --> 
-        <div class="ofert-1">
-            <div class="ofert-img">
-                <img src="images/bol.png" alt="">
-            </div>
-            <div class="ofert-txt">
-                <h3>BOLSAS PERSONALIZADAS</h3>
-                <p>Diseña tus bolsas para tu negocio.</p>
-                <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre las bolsas perzonalizadas." target="_blank" class="btn-2">Informacion</a>
-            </div>
-        </div>
-    </section>
-     <section class="ofert container">
-       <!-- /* producto 1 */ --> 
-        <div class="ofert-1">
-            <div class="ofert-img">
-                <img src="images/cal.png" alt="">
-            </div>
-            <div class="ofert-txt">
-                <h3>CALENDARIOS PERSONALIZADOS</h3>
-                <p>Diseña tu calendario para tu negocio.</p>
-                <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre los calendarios perzonalizados." target="_blank" class="btn-2">Informacion</a>
-            </div>
-        </div>
-        <!-- /* producto 2 */ --> 
-        <div class="ofert-1">
-            <div class="ofert-img">
-                <img src="images/not.png" alt="">
-            </div>
-            <div class="ofert-txt">
-                <h3>NOTAS DE REMISIÓN</h3>
-                <p>Personaliza tus notas de remición.</p>
-                <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre las notas de remición perzonalizadas." target="_blank" class="btn-2">Informacion</a>
-            </div>
-        </div>
-        <!-- /* producto 3 */ --> 
-        <div class="ofert-1">
-            <div class="ofert-img">
-                <img src="images/se.png" alt="">
-            </div>
-            <div class="ofert-txt">
-                <h3>SELLOS</h3>
-                <p>Personaliza tus sellos con nosotros.</p>
-                <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre los sellos perzonalizados." target="_blank" class="btn-2">Informacion</a>
-            </div>
-        </div>
-    </section>
-     <section class="ofert container">
-       <!-- /* producto 1 */ --> 
-        <div class="ofert-1">
-            <div class="ofert-img">
-                <img src="images/lona.png" alt="">
-            </div>
-            <div class="ofert-txt">
-                <h3>LONAS</h3>
-                <p>Diseñamos e imprimimos tus lonas.</p>
-                <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre las lonas perzonalizados." target="_blank" class="btn-2">Informacion</a>
-            </div>
-        </div>
-        <!-- /* producto 2 */ --> 
-        <div class="ofert-1">
-            <div class="ofert-img">
-                <img src="images/vol.png" alt="">
-            </div>
-            <div class="ofert-txt">
-                <h3>VOLANTES DE PUBLICIDAD</h3>
-                <p>Haz tu pedido y diseño con nosotros, cualquier tipo de volantes.</p>
-                <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre los volantes perzonalizados." target="_blank" class="btn-2">Informacion</a>
-            </div>
-        </div>
-        <!-- /* producto 3 */ --> 
-        <div class="ofert-1">
-            <div class="ofert-img">
-                <img src="images/et.png" alt="">
-            </div>
-            <div class="ofert-txt">
-                <h3>ETIQUETAS DE PRODUCTOS</h3>
-                <p>Diseña con nosotros cualquier tipo de etiquetas adhesivas para tus productos.</p>
-                <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre las etiquetas con adhesivo perzonalizadas." target="_blank" class="btn-2">Informacion</a>
-            </div>
-        </div>
-    </section>
-     <section class="ofert container">
-       <!-- /* producto 1 */ --> 
-        <div class="ofert-1">
-            <div class="ofert-img">
-                <img src="images/eti.jpeg" alt="">
-            </div>
-            <div class="ofert-txt">
-                <h3>ETIQUETAS DE PRODUCTOS</h3>
-                <p>Diseña con nosotros cualquier tipo de etiquetas para tus productos.</p>
-                <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre las etiquetas perzonalizadas." target="_blank" class="btn-2">Informacion</a>
-            </div>
-        </div>
-        <!-- /* producto 2 */ --> 
-        <div class="ofert-1">
-            <div class="ofert-img">
-                <img src="images/papgra.jpg" alt="">
-            </div>
-            <div class="ofert-txt">
-                <h3>PAPEL GRADO ALIMENTICIO</h3>
-                <p>Diseña con nosotros el papel para envolver tus productos con el logo de tu negocio.</p>
-                <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre el papel de grado alimenticio perzonalizados." target="_blank" class="btn-2">Informacion</a>
-            </div>
-        </div>
-        <!-- /* producto 3 */ --> 
-        <div class="ofert-1">
-            <div class="ofert-img">
-                <img src="images/go.png" alt="">
-            </div>
-            <div class="ofert-txt">
-                <h3>GORRAS</h3>
-                <p>Crea tus gorras personalizada.</p>
-                <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre las gorras perzonalizadas." target="_blank" class="btn-2">Informacion</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="ofert container">
-       <!-- /* producto 1 */ --> 
-        <div class="ofert-1">
-            <div class="ofert-img">
-                <img src="images/caja.png" alt="">
-            </div>
-            <div class="ofert-txt">
-                <h3>CAJAS</h3>
-                <p>Diseña con nosotros cualquier tipo de caja.</p>
-                <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre las cajas perzonalizadas." target="_blank" class="btn-2">Informacion</a>
-            </div>
-        </div>
-        <!-- /* producto 2 */ --> 
-        <div class="ofert-1">
-            <div class="ofert-img">
-                <img src="images/dis.png" alt="">
-            </div>
-            <div class="ofert-txt">
-                <h3>DISPLAYS publicitario</h3>
-                <p>Display personalizado para tu negocio.</p>
-                <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre el display personalizado." target="_blank" class="btn-2">Informacion</a>
-            </div>
-        </div>
-        <!-- /* producto 3 */ --> 
-        <div class="ofert-1">
-            <div class="ofert-img">
-                <img src="images/porta.png" alt="">
-            </div>
-            <div class="ofert-txt">
-                <h3>Porta X Banner Publicitario</h3>
-                <p>Porta X Banner personalizado para tu negocio.</p>
-                <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre el Porta X Banner personalizado." target="_blank" class="btn-2">Informacion</a>
-            </div>
-        </div>
-    </section>
-
     <main class="products container" id="lista-1">
 
         <h2 id="pro">Productos</h2>
 
         <div class="product-content">
-           <!-- /* producto 1 */ --> 
+            <!-- /* producto 1 */ --> 
             <div class="product">
-                <img src="images/taa.jpg" alt="">
+                <img src="ima/cmc.png" alt="">
+                <div class="product-txt">
+                    <h3>Centros de mesa</h3>
+                    <p>Centro de mesa perzonalizado.</p>
+                    <p class="precio">$70</p>
+                    <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre el centro de mesa." target="_blank" class="btn-2">REALIZAR COTIZACIÓN</a>
+                </div>
+            </div>
+            <!-- /* producto 2 */ --> 
+            <div class="product">
+                <img src="ima/cmg.png" alt="">
+                <div class="product-txt">
+                    <h3>centros de mesa</h3>
+                    <p>centro de mesa con globo personalizado.</p>
+                    <p class="precio">$90</p>
+                    <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre el centro de mesa con globo." target="_blank" class="btn-2">REALIZAR COTIZACIÓN</a>
+                </div>
+            </div>
+            <!-- /* producto 3 */ --> 
+            <div class="product">
+                <img src="ima/cmt.png" alt="">
+                <div class="product-txt">
+                    <h3>tazas adornadas</h3>
+                    <p>Taza de 11oz cerámica personalizada adornada.</p>
+                    <p class="precio">$80</p>
+                    <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre la taza de 11oz adornada." target="_blank" class="btn-2">REALIZAR COTIZACIÓN</a>
+                </div>
+            </div>
+            <!-- /* producto 4 */ --> 
+            <div class="product">
+                <img src="ima/cmtg.png" alt="">
+                <div class="product-txt">
+                    <h3>Taza adornadas</h3>
+                    <p>Taza de 17oz cerámica personalizada adornada.</p>
+                    <p class="precio">$120</p>
+                     <a href="https://api.whatsapp.com/send?phone=56352325989&text=Hola IMPRENTA MIGA, Me gustaría más información sobre la taza de 17oz adornada" target="_blank" class="btn-2">REALIZAR COTIZACIÓN</a>
+                </div>
+            </div>
+         <!-- /* producto 5 */ --> 
+            <div class="product">
+                <img src="ima/glo.png" alt="">
+                <div class="product-txt">
+                    <h3>globos</h3>
+                    <p>Globos burbuja personalizado.</p>
+                    <p class="precio">$60</p>
+                     <a href="https://api.whatsapp.com/send?phone=56352325989&text=Hola IMPRENTA MIGA, Me gustaría más información sobre los globos de revelación de genero" target="_blank" class="btn-2">REALIZAR COTIZACIÓN</a>
+                </div>
+            </div>
+            <!-- /* producto 6 */ --> 
+            <div class="product">
+                <img src="ima/llaver.png" alt="">
+                <div class="product-txt">
+                    <h3>llaveros</h3>
+                    <p>llaveros metalicos personalizados.</p>
+                    <p class="precio">$25</p>
+                    <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre la los llaveros metalicos personalizados" target="_blank" class="btn-2">REALIZAR COTIZACIÓN</a>
+                </div>
+            </div>
+           <!-- /* producto 7 */ --> 
+            <div class="product">
+                <img src="ima/taa.jpg" alt="">
                 <div class="product-txt">
                     <h3>Taza</h3>
                     <p>Taza de 11oz cerámica personalizada.</p>
                     <p class="precio">$55</p>
-                    <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre la taza personalizado.." target="_blank" class="btn-2">REALIZAR COTIZACIÓN</a>
+                    <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre la taza personalizado." target="_blank" class="btn-2">REALIZAR COTIZACIÓN</a>
                 </div>
             </div>
-            <!-- /* producto 1 */ --> 
+            <!-- /* producto 8 */ --> 
             <div class="product">
-                <img src="images/tdm.png" alt="">
+                <img src="ima/tdm.png" alt="">
                 <div class="product-txt">
                     <h3>Taza</h3>
                     <p>Taza de 11oz cerámica personalizada para día de muestros.</p>
                     <p class="precio">$55</p>
-                    <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre la taza personalizado.." target="_blank" class="btn-2">REALIZAR COTIZACIÓN</a>
+                    <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre la taza personalizado." target="_blank" class="btn-2">REALIZAR COTIZACIÓN</a>
                 </div>
             </div>
-            <!-- /* producto 1 */ --> 
+            <!-- /* producto 9 */ --> 
             <div class="product">
-                <img src="images/sv.png" alt="">
+                <img src="ima/sv.png" alt="">
                 <div class="product-txt">
                     <h3>Stickers</h3>
                     <p>Stickers para veladora personalizado para día de muestros.</p>
-                    <p class="precio">$8</p>
+                    <p class="precio">$10</p>
                     <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre stickers para veladora." target="_blank" class="btn-2">REALIZAR COTIZACIÓN</a>
+                </div>
+            </div>
+            <!-- /* producto 10 */ --> 
+            <div class="product">
+                <img src="ima/t11.png" alt="">
+                <div class="product-txt">
+                    <h3>Taza</h3>
+                    <p>Taza de 17oz cerámica personalizada.</p>
+                    <p class="precio">$80</p>
+                     <a href="https://api.whatsapp.com/send?phone=56352325989&text=Hola IMPRENTA MIGA, Me gustaría más información sobre la taza 17oz personalizada." target="_blank" class="btn-2">REALIZAR COTIZACIÓN</a>
                 </div>
             </div>
          <!-- /* producto 2 */ --> 
             <div class="product">
-                <img src="images/tsa.png" alt="">
+                <img src="ima/tsa.png" alt="">
                 <div class="product-txt">
                     <h3>Taza</h3>
                     <p>Taza de 11oz satinada de color personalizado.</p>
                     <p class="precio">$80</p>
-                     <a href="https://api.whatsapp.com/send?phone=56352325989&text=Hola IMPRENTA MIGA, Me gustaría más información sobre la taza satinada de color personalizado" target="_blank" class="btn-2">REALIZAR COTIZACIÓN</a>
+                     <a href="https://api.whatsapp.com/send?phone=56352325989&text=Hola IMPRENTA MIGA, Me gustaría más información sobre la taza satinada de color personalizada." target="_blank" class="btn-2">REALIZAR COTIZACIÓN</a>
                 </div>
             </div>
-
             <!-- /* producto 3 */ --> 
             <div class="product">
-                <img src="images/tcf.png" alt="">
+                <img src="ima/tcf.png" alt="">
                 <div class="product-txt">
                     <h3>Taza</h3>
                     <p>Taza de 11oz cerámica con fondo de color personalizado.</p>
@@ -431,7 +265,7 @@
             </div>
             <!-- /* producto 4 */ --> 
             <div class="product">
-                <img src="images/tacu.png" alt="">
+                <img src="ima/tacu.png" alt="">
                 <div class="product-txt">
                     <h3>Taza</h3>
                     <p>Taza de 11oz cerámica con fondo de color y cuchara personalizado.</p>
@@ -441,7 +275,7 @@
             </div>
              <!-- /* producto 5 */ --> 
             <div class="product">
-                <img src="images/tes.png" alt="">
+                <img src="ima/tes.png" alt="">
                 <div class="product-txt">
                     <h3>Taza</h3>
                     <p>Taza espejo de 11oz cerámica personalizada.</p>
@@ -451,7 +285,7 @@
             </div>
             <!-- /* producto 6 */ --> 
             <div class="product">
-                <img src="images/tama.png" alt="">
+                <img src="ima/tama.png" alt="">
                 <div class="product-txt">
                     <h3>Taza Magica</h3>
                     <p>Taza Magica de 11oz Personaliza con imagen o frase.</p>
@@ -461,7 +295,7 @@
             </div>
              <!-- /* producto 7 */ --> 
             <div class="product">
-                <img src="images/trli.png" alt="">
+                <img src="ima/trli.png" alt="">
                 <div class="product-txt">
                     <h3>Tarro</h3>
                     <p>Tarro liso de 16Oz personalizado con DTF UV.</p>
@@ -471,7 +305,7 @@
             </div>
             <!-- /* producto 8 */ --> 
             <div class="product">
-                <img src="images/trsa.png" alt="">
+                <img src="ima/trsa.png" alt="">
                 <div class="product-txt">
                     <h3>Tarro</h3>
                     <p>Tarro satinado de 16Oz personalizado.</p>
@@ -481,7 +315,7 @@
             </div>
             <!-- /* producto 9 */ --> 
             <div class="product">
-                <img src="images/trsac.png" alt="">
+                <img src="ima/trsac.png" alt="">
                 <div class="product-txt">
                     <h3>Tarro</h3>
                     <p>Tarro satinado con color de 16Oz personalizado.</p>
@@ -491,7 +325,7 @@
             </div>
              <!-- /* producto 10 */ --> 
             <div class="product">
-                <img src="images/trma.png" alt="">
+                <img src="ima/trma.png" alt="">
                 <div class="product-txt">
                     <h3>Tarro</h3>
                     <p>Tarro mágico de 16Oz personalizado.</p>
@@ -501,7 +335,7 @@
             </div>
             <!-- /* producto 11 */ --> 
             <div class="product">
-                <img src="images/tqli.png" alt="">
+                <img src="ima/tqli.png" alt="">
                 <div class="product-txt">
                     <h3>Tequilero</h3>
                     <p>Tequilero liso sin diseño.</p>
@@ -511,7 +345,7 @@
             </div>
             <!-- /* producto 12 */ --> 
             <div class="product">
-                <img src="images/tqla.png" alt="">
+                <img src="ima/tqla.png" alt="">
                 <div class="product-txt">
                     <h3>Tequilero</h3>
                     <p>Tequilero personalizado con laser.</p>
@@ -521,7 +355,7 @@
             </div>
              <!-- /* producto 13 */ --> 
             <div class="product">
-                <img src="images/tqse.png" alt="">
+                <img src="ima/tqse.png" alt="">
                 <div class="product-txt">
                     <h3>Tequilero</h3>
                     <p>Tequilero personalizado con serigrafía.</p>
@@ -531,7 +365,7 @@
             </div>
              <!-- /* producto 14 */ --> 
             <div class="product">
-                <img src="images/tqdtf.png" alt="">
+                <img src="ima/tqdtf.png" alt="">
                 <div class="product-txt">
                     <h3>Tequilero</h3>
                     <p>Tequilero personalizado con DTF UV.</p>
@@ -541,7 +375,7 @@
             </div>
             <!-- /* producto 15 */ --> 
             <div class="product">
-                <img src="images/vcli.png" alt="">
+                <img src="ima/vcli.png" alt="">
                 <div class="product-txt">
                     <h3>Vaso de vidrio</h3>
                     <p>Vaso de vidrio cubero liso</p>
@@ -551,7 +385,7 @@
             </div>
             <!-- /* producto 16 */ --> 
             <div class="product">
-                <img src="images/vcla.png" alt="">
+                <img src="ima/vcla.png" alt="">
                 <div class="product-txt">
                     <h3>Vaso de vidrio</h3>
                     <p>Vaso de vidrio cubero personalizado con grabado laser.</p>
@@ -561,7 +395,7 @@
             </div>
              <!-- /* producto 17 */ --> 
             <div class="product">
-                <img src="images/vcse.png" alt="">
+                <img src="ima/vcse.png" alt="">
                 <div class="product-txt">
                     <h3>Vaso de vidrio</h3>
                     <p>Vaso de vidrio cubero personalizado con serigrafía.</p>
@@ -571,7 +405,7 @@
             </div>
              <!-- /* producto 18 */ --> 
             <div class="product">
-                <img src="images/vcdtf.png" alt="">
+                <img src="ima/vcdtf.png" alt="">
                 <div class="product-txt">
                     <h3>Tequilero</h3>
                     <p>Vaso de vidrio cubero personalizado con DTF UV.</p>
@@ -581,7 +415,7 @@
             </div>
             <!-- /* producto 19 */ --> 
             <div class="product">
-                <img src="images/vsli.png" alt="">
+                <img src="ima/vsli.png" alt="">
                 <div class="product-txt">
                     <h3>Vaso de vidrio</h3>
                     <p>Vaso de vidrio cubero satinado.</p>
@@ -591,7 +425,7 @@
             </div>
             <!-- /* producto 20 */ --> 
             <div class="product">
-                <img src="images/vsse.png" alt="">
+                <img src="ima/vsse.png" alt="">
                 <div class="product-txt">
                     <h3>Vaso de vidrio</h3>
                     <p>Vaso de vidrio cubero satinado personalizado con sublimación.</p>
@@ -601,7 +435,7 @@
             </div>
             <!-- /* producto 21 */ --> 
             <div class="product">
-                <img src="images/vscs.png" alt="">
+                <img src="ima/vscs.png" alt="">
                 <div class="product-txt">
                     <h3>Vaso de vidrio</h3>
                     <p>Vaso de vidrio cubero satinado personalizado con sublimación y color.</p>
@@ -611,7 +445,7 @@
             </div>
             <!-- /* producto 22 */ --> 
             <div class="product">
-                <img src="images/vdo.png" alt="">
+                <img src="ima/vdo.png" alt="">
                 <div class="product-txt">
                     <h3>Vaso de plástico</h3>
                     <p>Vaso de plástico de domo personalizado con DTF UV.</p>
@@ -621,7 +455,7 @@
             </div>
             <!-- /* producto 23 */ --> 
             <div class="product">
-                <img src="images/vgli.png" alt="">
+                <img src="ima/vgli.png" alt="">
                 <div class="product-txt">
                      <h3>Vaso de plástico</h3>
                     <p>Vaso de plástico con gliter personalizado con DTF UV.</p>
@@ -631,7 +465,7 @@
             </div>
             <!-- /* producto 24 */ --> 
             <div class="product">
-                <img src="images/vgb.png" alt="">
+                <img src="ima/vgb.png" alt="">
                 <div class="product-txt">
                     <h3>Vaso de plástico</h3>
                     <p>Vaso de plástico con gliter y brillitos personalizado con DTF UV.</p>
@@ -641,7 +475,7 @@
             </div>
             <!-- /* producto 25 */ --> 
             <div class="product">
-                <img src="images/cp.png" alt="">
+                <img src="ima/cp.png" alt="">
                 <div class="product-txt">
                     <h3>Vaso de plastico</h3>
                     <p>Vaso de plastico cilindro personalizado con DTF UV.</p>
@@ -651,7 +485,7 @@
             </div>
             <!-- /* producto 26 */ --> 
             <div class="product">
-                <img src="images/vps.png" alt="">
+                <img src="ima/vps.png" alt="">
                 <div class="product-txt">
                     <h3>Vaso de plastico</h3>
                     <p>Vaso de plastico sports 350ml personalizado con DTF UV.</p>
@@ -661,7 +495,7 @@
             </div>
             <!-- /* producto 27 */ --> 
             <div class="product">
-                <img src="images/vpsp.png" alt="">
+                <img src="ima/vpsp.png" alt="">
                 <div class="product-txt">
                     <h3>Vaso de plastico</h3>
                     <p>Vaso de plastico sports 1L personalizado con DTF UV.</p>
@@ -669,9 +503,19 @@
                     <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre Vaso de plastico sports 1L con DTF UV." target="_blank" class="btn-2">REALIZAR COTIZACIÓN</a>
                 </div>
             </div>
+             <!-- /* producto 27 */ --> 
+            <div class="product">
+                <img src="ima/vapa.jpeg" alt="">
+                <div class="product-txt">
+                    <h3>Vaso de plastico</h3>
+                    <p>Vaso de plastico cilindro 500ml personalizado con DTF UV.</p>
+                    <p class="precio">$45</p>
+                    <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre Vaso de plastico sports 1L con DTF UV." target="_blank" class="btn-2">REALIZAR COTIZACIÓN</a>
+                </div>
+            </div>
             <!-- /* producto 28 */ --> 
              <div class="product">
-                <img src="images/pcn.png" alt="">
+                <img src="ima/pcn.png" alt="">
                 <div class="product-txt">
                     <h3>Playera</h3>
                     <p>Playera de algodón manga corta de caballero personalizada.</p>
@@ -681,7 +525,7 @@
             </div>
              <!-- /* producto 29 */ --> 
              <div class="product">
-                <img src="images/64.png" alt="">
+                <img src="ima/64.png" alt="">
                 <div class="product-txt">
                     <h3>Playera</h3>
                     <p>Playera de algodón manga larga de caballero personalizada.</p>
@@ -691,7 +535,7 @@
             </div>
             <!-- /* producto 30 */ --> 
              <div class="product">
-                <img src="images/pecb.png" alt="">
+                <img src="ima/pecb.png" alt="">
                 <div class="product-txt">
                     <h3>Playera</h3>
                     <p>Playera de algodón manga corta de dama personalizada.</p>
@@ -701,7 +545,7 @@
             </div>
             <!-- /* producto 31 */ --> 
              <div class="product">
-                <img src="images/pmla.png" alt="">
+                <img src="ima/pmla.png" alt="">
                 <div class="product-txt">
                     <h3>Playera</h3>
                     <p>Playera de algodón manga larga de dama personalizada.</p>
@@ -711,7 +555,7 @@
             </div>
             <!-- /* producto 32 */ --> 
              <div class="product">
-                <img src="images/pmr.png" alt="">
+                <img src="ima/pmr.png" alt="">
                 <div class="product-txt">
                     <h3>Playera</h3>
                     <p>Playera de algodón manga corta de niño personalizada.</p>
@@ -721,7 +565,7 @@
             </div>
             <!-- /* producto 33 */ --> 
              <div class="product">
-                <img src="images/pnc.png" alt="">
+                <img src="ima/pnc.png" alt="">
                 <div class="product-txt">
                     <h3>Playera</h3>
                     <p>Playera de algodón manga corta de niña personalizada.</p>
@@ -731,7 +575,7 @@
             </div>
             <!-- /* producto 34 */ --> 
              <div class="product">
-                <img src="images/psib.png" alt="">
+                <img src="ima/psib.png" alt="">
                 <div class="product-txt">
                     <h3>Playera</h3>
                     <p>Playera de poliéster unisex manga corta personalizada con sublimación</p>
@@ -741,7 +585,7 @@
             </div>
             <!-- /* producto 35 */ --> 
              <div class="product">
-                <img src="images/pps.png" alt="">
+                <img src="ima/pps.png" alt="">
                 <div class="product-txt">
                     <h3>Playera</h3>
                     <p>Playera de poliéster unisex manga larga personalizada con sublimación</p>
@@ -751,7 +595,7 @@
             </div>
             <!-- /* producto 36 */ --> 
              <div class="product">
-                <img src="images/su.png" alt="">
+                <img src="ima/su.png" alt="">
                 <div class="product-txt">
                     <h3>Sudadera</h3>
                     <p>Sudadera unisex personalizada diferentes tallas</p>
@@ -761,7 +605,7 @@
             </div>
             <!-- /* producto 37 */ --> 
              <div class="product">
-                <img src="images/ssg.png" alt="">
+                <img src="ima/ssg.png" alt="">
                 <div class="product-txt">
                     <h3>Sudadera</h3>
                     <p>Sudadera unisex sin gorro personalizada diferentes tallas</p>
@@ -771,7 +615,7 @@
             </div>
              <!-- /* producto 38 */ --> 
              <div class="product">
-                <img src="images/30.png" alt="">
+                <img src="ima/go.png" alt="">
                 <div class="product-txt">
                     <h3>Gorra</h3>
                     <p>Gorra de media malla personalizada con sublimación.</p>
@@ -781,7 +625,7 @@
             </div>
             <!-- /* producto 39 */ --> 
              <div class="product">
-                <img src="images/mandiles.jpeg" alt="">
+                <img src="ima/mandiles.jpeg" alt="">
                 <div class="product-txt">
                     <h3>Mandiles</h3>
                     <p>Mandil largo personalizado sin bolsas.</p>
@@ -791,7 +635,7 @@
             </div>
             <!-- /* producto 40 */ --> 
              <div class="product">
-                <img src="images/mcb.png" alt="">
+                <img src="ima/mcb.png" alt="">
                 <div class="product-txt">
                     <h3>Mandiles</h3>
                     <p>Mandil largo personalizado con bolsas.</p>
@@ -801,7 +645,7 @@
             </div>
             <!-- /* producto 5 */ --> 
              <div class="product">
-                <img src="images/bp.jpeg" alt="">
+                <img src="ima/bp.jpeg" alt="">
                 <div class="product-txt">
                     <h3>bolsa</h3>
                     <p>Bolsa de poliester de dos colores personalizada de 35 x 35</p>
@@ -811,7 +655,7 @@
             </div>
              <!-- /* producto 6 */ --> 
              <div class="product">
-                <img src="images/bolsaeco.jpeg" alt="">
+                <img src="ima/bolsaeco.jpeg" alt="">
                 <div class="product-txt">
                     <h3>Bolsa</h3>
                     <p>Bolsa ecológica pellon personalizada, Cotizar por WhatsApp medidas y precio.</p>
@@ -821,7 +665,7 @@
             </div>
             <!-- /* producto 5 */ --> 
              <div class="product">
-                <img src="images/bolsam.jpeg" alt="">
+                <img src="ima/bolsam.jpeg" alt="">
                 <div class="product-txt">
                     <h3>Bolsa</h3>
                     <p>Bolsa de manta personalizada, Cotizar por WhatsApp medidas y precio.</p>
@@ -831,7 +675,7 @@
             </div>
             <!-- /* producto 5 */ --> 
              <div class="product">
-                <img src="images/bneco.jpeg" alt="">
+                <img src="ima/bneco.jpeg" alt="">
                 <div class="product-txt">
                     <h3>Bolsa</h3>
                     <p>Bolsa ecológica personalizada, Cotizar por WhatsApp medidas y precio.</p>
@@ -841,17 +685,17 @@
             </div>
              <!-- /* producto 6 */ --> 
              <div class="product">
-                <img src="images/moeco.jpeg" alt="">
+                <img src="ima/moeco.jpeg" alt="">
                 <div class="product-txt">
                     <h3>Morral</h3>
-                    <p>ecológico personalizado, Cotizar por WhatsApp medidas y precio.</p>
+                    <p>Morral ecológico personalizado, Cotizar por WhatsApp medidas y precio.</p>
                     <p class="precio">$$$</p>
                     <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre el morral personalizado." target="_blank" class="btn-2">REALIZAR COTIZACIÓN</a>
                 </div>
             </div>
              <!-- /* producto 2 */ --> 
             <div class="product">
-                <img src="images/se4727.jpg" alt="">
+                <img src="ima/se4727.jpg" alt="">
                 <div class="product-txt">
                     <h3>Sello</h3>
                     <p>Sello fechador trodat 60 x 40mm placa de texto, 4mm fecha.</p>
@@ -862,7 +706,7 @@
 
             <!-- /* producto 3 */ --> 
             <div class="product">
-                <img src="images/se4726.jpg" alt="">
+                <img src="ima/se4726.jpg" alt="">
                 <div class="product-txt">
                     <h3>sello</h3>
                     <p>Sello fechador trodat 75 x 38mm placa de texto, 4mm fecha.</p>
@@ -872,7 +716,7 @@
             </div>
              <!-- /* producto 4 */ --> 
              <div class="product">
-                <img src="images/se4729.jpg" alt="">
+                <img src="ima/se4729.jpg" alt="">
                 <div class="product-txt">
                     <h3>sello</h3>
                     <p>Sello fechador trodat 50 x 30mm placa de texto, 3mm fecha.</p>
@@ -882,7 +726,7 @@
             </div>
              <!-- /* producto 5 */ --> 
              <div class="product">
-                <img src="images/sello9511.webp" alt="">
+                <img src="ima/sello9511.webp" alt="">
                 <div class="product-txt">
                     <h3>Sello</h3>
                     <p>Sello de bolsillo trodat 38 x 14mm placa de texto.</p>
@@ -892,7 +736,7 @@
             </div>
              <!-- /* producto 6 */ --> 
              <div class="product">
-                <img src="images/sello9512.webp" alt="">
+                <img src="ima/sello9512.webp" alt="">
                 <div class="product-txt">
                     <h3>Sello</h3>
                     <p>Sello de bolsillo trodat 47 x 18mm placa de texto.</p>
@@ -903,7 +747,7 @@
 
              <!-- /* sellos */ --> 
              <div class="product">
-                <img src="images/sellomadera.webp" alt="">
+                <img src="ima/sellomadera.webp" alt="">
                 <div class="product-txt">
                     <h3>sello</h3>
                     <p>Sellos de madera personalizados, Cotizar por WhatsApp.</p>
@@ -913,7 +757,7 @@
             </div>
              <!-- /* sellos */ --> 
              <div class="product">
-                <img src="images/gomadesello.jpg" alt="">
+                <img src="ima/gomadesello.jpg" alt="">
                 <div class="product-txt">
                     <h3>Gomas</h3>
                     <p>Gomas personalizadas para sellos, Cotizar por WhatsApp.</p>
@@ -923,7 +767,7 @@
             </div>
              <!-- /* sellos */ --> 
              <div class="product">
-                <img src="images/tintas.png" alt="">
+                <img src="ima/tintas.png" alt="">
                 <div class="product-txt">
                     <h3>tintas</h3>
                     <p>tintas para tus sellos, Cotizar por WhatsApp.</p>
@@ -933,7 +777,7 @@
             </div>
             <!-- /* producto 1 */ --> 
             <div class="product">
-                <img src="images/lbob.jpeg" alt="">
+                <img src="ima/lbob.jpeg" alt="">
                 <div class="product-txt">
                     <h3>LIBRO PARA COLOREAR</h3>
                     <p>Libro para colorear personalizado con crayolas.</p>
@@ -944,7 +788,7 @@
             </div>
          <!-- /* producto 2 */ --> 
             <div class="product">
-                <img src="images/lcars.jpeg" alt="">
+                <img src="ima/lcars.jpeg" alt="">
                 <div class="product-txt">
                     <h3>LIBRO PARA COLOREAR</h3>
                     <p>Libro para colorear personalizado con crayolas y puedes escojer un juguete.</p>
@@ -955,7 +799,7 @@
             </div>
              <!-- /* producto 6 */ --> 
              <div class="product">
-                <img src="images/lsopa.jpeg" alt="">
+                <img src="ima/lsopa.jpeg" alt="">
                 <div class="product-txt">
                     <h3>LIBRO DE SOPA DE LETRAS</h3>
                     <p>Libro de sopa de letras con varios temas con crayolas.</p>
@@ -966,7 +810,7 @@
             </div>
             <!-- /* producto 3 */ --> 
             <div class="product">
-                <img src="images/plu.jpeg" alt="">
+                <img src="ima/plu.jpeg" alt="">
                 <div class="product-txt">
                     <h3>pluma bolígrafo</h3>
                     <p>Pluma bolígrafo personalizada, Cotizar por WhatsApp.</p>
@@ -977,7 +821,7 @@
             </div>
              <!-- /* producto 4 */ --> 
              <div class="product">
-                <img src="images/tc.png" alt="">
+                <img src="ima/tc.png" alt="">
                 <div class="product-txt">
                     <h3>Termo</h3>
                     <p>Termo de acero inoxidable personalizado.</p>
@@ -988,7 +832,7 @@
             </div>
             <!-- /* producto 6 */ --> 
              <div class="product">
-                <img src="images/tar.png" alt="">
+                <img src="ima/tar.png" alt="">
                 <div class="product-txt">
                     <h3>Tarjetas de presentación</h3>
                     <p>Millar de tarjetas de presentación a color una cara personalizadas.</p>
@@ -999,7 +843,7 @@
             </div>
          <!-- /* producto 2 */ --> 
             <div class="product">
-                <img src="images/calend.png" alt="">
+                <img src="ima/calend.png" alt="">
                 <div class="product-txt">
                     <h3>Calendarios</h3>
                     <p>Calendarios personalizados para tu negocio, Cotizar por WhatsApp.</p>
@@ -1010,40 +854,40 @@
             </div>
             <!-- /* producto 4 */ --> 
              <div class="product">
-                <img src="images/notas.jpg" alt="">
+                <img src="ima/notas.jpg" alt="">
                 <div class="product-txt">
                     <h3>notas de remisión</h3>
                     <p>1 millar de notas de remisión tamaño carta personalizadas, original y copia.</p>
-                    <p class="precio">$1600</p>
+                    <p class="precio">$1800</p>
                     <a href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre las notas de remisión tamaño carta." class="agregar-carrito btn-2" data-id="6">REALIZAR COTIZACIÓN</a>
                 </div>
             </div>
              <!-- /* producto 4 */ --> 
              <div class="product">
-                <img src="images/notas.jpg" alt="">
+                <img src="ima/notas.jpg" alt="">
                 <div class="product-txt">
                     <h3>notas de remisión</h3>
                     <p>1 millar de notas de remisión de 1/2 carta personalizadas, original y copia.</p>
-                    <p class="precio">$1000</p>
+                    <p class="precio">$1100</p>
                     <a href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre las notas de remisión tamaño 1/2 de carta." class="agregar-carrito btn-2" data-id="6">REALIZAR COTIZACIÓN</a>
                 </div>
             </div>
             <!-- /* producto 4 */ --> 
              <div class="product">
-                <img src="images/notas.jpg" alt="">
+                <img src="ima/notas.jpg" alt="">
                 <div class="product-txt">
                     <h3>notas de remisión</h3>
                     <p>1 millar de notas de remisión de 1/4 de carta personalizadas, original y copia.</p>
-                    <p class="precio">$550</p>
+                    <p class="precio">$600</p>
                     <a href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <a href="https://api.whatsapp.com/send?phone=5635232598&text=Hola IMPRENTA MIGA, Me gustaría más información sobre las notas de remisión tamaño 1/4 de carta." class="agregar-carrito btn-2" data-id="6">REALIZAR COTIZACIÓN</a>
                 </div>
             </div>
               <!-- /* producto 6 */ --> 
              <div class="product">
-                <img src="images/papgra.jpg" alt="">
+                <img src="ima/papgra.jpg" alt="">
                 <div class="product-txt">
                     <h3>Papel grado alimenticio</h3>
                     <p>Papel grado alimenticio personalizado para tu negocio, Cotizar por WhatsApp.</p>
@@ -1054,7 +898,7 @@
             </div>
             <!-- /* producto 6 */ --> 
              <div class="product">
-                <img src="images/stc.png" alt="">
+                <img src="ima/stc.png" alt="">
                 <div class="product-txt">
                     <h3>stickers</h3>
                     <p>Plantilla tamaño carta papel adhesivo brillante.</p>
@@ -1065,7 +909,7 @@
             </div>
             <!-- /* producto 6 */ --> 
              <div class="product">
-                <img src="images/stp.png" alt="">
+                <img src="ima/stp.png" alt="">
                 <div class="product-txt">
                     <h3>stickers</h3>
                     <p>Plantilla tamaño 30cm x 40cm papel adhesivo brillante.</p>
@@ -1076,7 +920,7 @@
             </div>
              <!-- /* producto 6 */ --> 
              <div class="product">
-                <img src="images/vocu.png" alt="">
+                <img src="ima/vocu.png" alt="">
                 <div class="product-txt">
                     <h3>Volates</h3>
                     <p>Millar de volantes publicitarios a color tamaño 1/4 carta</p>
@@ -1087,7 +931,7 @@
             </div>
             <!-- /* producto 6 */ --> 
              <div class="product">
-                <img src="images/vom.png" alt="">
+                <img src="ima/vom.png" alt="">
                 <div class="product-txt">
                     <h3>Volates</h3>
                     <p>Millar de volantes publicitarios a color tamaño 1/2 carta</p>
@@ -1098,7 +942,7 @@
             </div>
             <!-- /* producto 6 */ --> 
              <div class="product">
-                <img src="images/vol.png" alt="">
+                <img src="ima/vol.png" alt="">
                 <div class="product-txt">
                     <h3>Volates</h3>
                     <p>Millar de volantes publicitarios a color tamaño carta</p>
@@ -1109,7 +953,7 @@
             </div>
             <!-- /* producto 6 */ --> 
              <div class="product">
-                <img src="images/invt.jpeg" alt="">
+                <img src="ima/invt.jpeg" alt="">
                 <div class="product-txt">
                     <h3>Invitaciónes</h3>
                     <p>Invitaciones en papel color beige media carta lista para entregar.</p>
@@ -1120,7 +964,7 @@
             </div>
             <!-- /* producto 6 */ --> 
              <div class="product">
-                <img src="images/e2.jpeg" alt="">
+                <img src="ima/e2.jpeg" alt="">
                 <div class="product-txt">
                     <h3>Etiquetas</h3>
                     <p>Millar de etiquetas para tubo de 2" personalizadas.</p>
@@ -1131,7 +975,7 @@
             </div>
             <!-- /* producto 6 */ --> 
              <div class="product">
-                <img src="images/b3.jpeg" alt="">
+                <img src="ima/b3.jpeg" alt="">
                 <div class="product-txt">
                     <h3>Etiquetas</h3>
                     <p>Millar de etiquetas para tubo de 3" personalizadas.</p>
@@ -1142,7 +986,7 @@
             </div>
             <!-- /* producto 6 */ --> 
              <div class="product">
-                <img src="images/e4.jpeg" alt="">
+                <img src="ima/e4.jpeg" alt="">
                 <div class="product-txt">
                     <h3>Etiquetas</h3>
                     <p>Millar de etiquetas para tubo de 4" personalizadas.</p>
@@ -1153,7 +997,7 @@
             </div>
             <!-- /* producto 6 */ --> 
              <div class="product">
-                <img src="images/ec.png" alt="">
+                <img src="ima/ec.png" alt="">
                 <div class="product-txt">
                     <h3>Etiquetas</h3>
                     <p>Millar de etiquetas para tubo de candela personalizadas.</p>
@@ -1164,7 +1008,7 @@
             </div>
             <!-- /* producto 6 */ --> 
              <div class="product">
-                <img src="images/Impresiones.png" alt="">
+                <img src="ima/Impresiones.png" alt="">
                 <div class="product-txt">
                     <h3>Impresiones</h3>
                     <p>Impresiones en diferentes tipos y tamaños de papel couche, mate, brillante, vinil blanco, vinil transparente, papel adhesivo, etc.</p>
@@ -1175,7 +1019,7 @@
             </div>
             <!-- /* producto 6 */ --> 
              <div class="product">
-                <img src="images/ima.png" alt="">
+                <img src="ima/ima.png" alt="">
                 <div class="product-txt">
                     <h3>Imanes publicitarios</h3>
                     <p>Impresiones de imanes en diferentes tamaños</p>
@@ -1186,7 +1030,7 @@
             </div>
             <!-- /* producto 6 */ --> 
              <div class="product">
-                <img src="images/lona.png" alt="">
+                <img src="ima/lona.png" alt="">
                 <div class="product-txt">
                     <h3>Lona</h3>
                     <p>Lona 1m x 1m Personalizada.</p>
@@ -1197,7 +1041,7 @@
             </div>
             <!-- /* producto 6 */ --> 
              <div class="product">
-                <img src="images/dis.png" alt="">
+                <img src="ima/dis.png" alt="">
                 <div class="product-txt">
                     <h3>Displays</h3>
                     <p>Displays personalizado para tu negocio, Cotizar por WhatsApp.</p>
@@ -1208,7 +1052,7 @@
             </div>
             <!-- /* producto 6 */ --> 
              <div class="product">
-                <img src="images/porta.png" alt="">
+                <img src="ima/porta.png" alt="">
                 <div class="product-txt">
                     <h3>Porta banner</h3>
                     <p>Porta banner publicitario personalizado para tu negocio, Cotizar por WhatsApp.</p>
@@ -1248,17 +1092,17 @@ document.getElementById('btnGoToTop').addEventListener('click', function() {
     
     <section class="blog container">
         <div class="blog-1">
-            <img src="images/imprenta.png" alt="">
+            <img src="ima/imprenta.png" alt="">
             
         </div>
 
         <div class="blog-1">
-            <img src="images/tra.png" alt="">
+            <img src="ima/tra.png" alt="">
             
         </div>
 
         <div class="blog-1">
-            <img src="images/imgsu.png" alt="">
+            <img src="ima/imgsu.png" alt="">
             
         </div>
     </section>
@@ -1268,7 +1112,7 @@ document.getElementById('btnGoToTop').addEventListener('click', function() {
             <div class="link">
                 <h3>REDES SOCIALES</h3>
                 <ul>
-                    <li><a href="linkaqui"><i class="fab fa-facebook"></i> FACEBOOK</a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61566587690610&mibextid=JRoKGi"><i class="fab fa-facebook"></i> FACEBOOK</a></li>
                     <li><a href="linkaqui"><i class="fab fa-instagram"></i> INSTAGRAM</a></li>
                     <li><a href="linkaqui"><i class="fab fa-tiktok"></i> TIK TOK</a></li>
                 </ul>
